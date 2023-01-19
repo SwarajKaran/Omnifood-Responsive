@@ -13,6 +13,7 @@ Bold: 700
 Default: 1
 Small: 1.05
 Medium: 1.2
+Large: 1.8
 Paragraph default:1.6
 
 -Letter Spacing
@@ -207,6 +208,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 .list-item {
   font-size: 1.8rem;

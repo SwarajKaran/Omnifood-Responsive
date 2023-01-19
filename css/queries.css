@@ -50,6 +50,58 @@ Instead, 1rem = 1em = 16px
     padding: 9.6rem 3.2rem;
   }
 }
+/* **************************** */
+/* Below 944 pixels (944/16)- 
+ for portrait tablets          */
+/* **************************** */
+@media (max-width: 59em) {
+  html {
+    /* 8/16 = 50% */
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .hero-text-box,
+  .hero-image-box {
+    text-align: center;
+  }
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .logos img {
+    height: 2.4rem;
+  }
+  .step-number {
+    font-size: 7.4rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta {
+    grid-template-columns: 3fr 2fr;
+    /* 3/5= 60% 2/5 40% */
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+}
+
 /* 
 
 --- 01 TYPOGRAPHY SYSTEM
