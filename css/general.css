@@ -60,12 +60,16 @@ html {
   /* percentage of users browser font size */
   font-size: 62.5%;
   /* with this rem will be calculated */
+
+  overflow-x: hidden;
 }
 body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+  /* only works if there's nothing absolutly positioned to viewport */
+  overflow-x: hidden;
 }
 /* **************************** */
 /* GENERAL REUSABLE COMPONENTS */
