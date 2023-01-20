@@ -92,11 +92,22 @@
             </div>
           </div>
           <div class="hero-image-box">
-            <img
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero.png" type="image/png" />
+              <!-- browser will replace src with one of above dependening on browser best fit -->
+              <img
+                src="/img/hero.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, food bowls on a table"
+              />
+            </picture>
+            <!-- <img
               src="/img/hero.png"
               class="hero-img"
               alt="Woman enjoying food, meals in storage container, food bowls on a table"
-            />
+            /> -->
+            <!-- image optimized - webp format -->
           </div>
         </div>
       </section>
