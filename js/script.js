@@ -54,6 +54,32 @@ allLinks.forEach(function (link) {
     }
   });
 });
+
+// Sticky nav
+const sectionHeroEl = document.querySelector(".section-hero");
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport, root: null
+    root: null,
+    // when sectionHeroEl is 0% of viewport
+    threshold: 0,
+
+    // to compensate height of navigation so that it
+    // doesn't overlap feature section
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionHeroEl);
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
