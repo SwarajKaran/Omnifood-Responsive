@@ -31,18 +31,26 @@ allLinks.forEach(function (link) {
     e.preventDefault();
     const href = link.getAttribute("href");
     // console.log(href);
-    //scroll back to top
     // include in html
     // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
+    //scroll back to top
+
     if (href === "#")
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
 
+    // scroll to other links
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    //close mobile navigation
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.classList.toggle("nav-open");
     }
   });
 });
