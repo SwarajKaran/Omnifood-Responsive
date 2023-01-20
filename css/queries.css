@@ -106,7 +106,9 @@ Instead, 1rem = 1em = 16px
     z-index: 9999;
   }
   .main-nav {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     position: absolute;
     top: 0;
     left: 0;
