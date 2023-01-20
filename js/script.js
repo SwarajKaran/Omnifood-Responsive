@@ -42,8 +42,12 @@ allLinks.forEach(function (link) {
         behavior: "smooth",
       });
 
+    // for external links:
+    if (href !== "#" && href.startsWith("http")) {
+      window.open(href);
+    }
     // scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
+    if (href !== "#" && !href.startsWith("http") && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
